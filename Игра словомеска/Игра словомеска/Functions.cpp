@@ -43,23 +43,23 @@ void startLevel()
 
 	short playerLives = 3;
 	short playerHints = 3;
-	const short COUNT_OF_EASY_WORDS = 10;
+	const short COUNT_OF_WORDS = 10;
 
-	string words[COUNT_OF_EASY_WORDS] =
+	string words[COUNT_OF_WORDS] =
 	{
 		"акула"  , "белка" , "камень" , "горка"  , "дракон",
 		"ежевика", "желудь", "заклад", "крапива", "лимонад"
 	};
-	randomizeArray(words, COUNT_OF_EASY_WORDS);
+	randomizeArray(words, COUNT_OF_WORDS);
 
 	cout << "\t\tИгра началась!" << endl;
 
-	for (int i = 0; i < COUNT_OF_EASY_WORDS; i++)
+	for (int i = 0; i < COUNT_OF_WORDS; i++)
 	{
 		string playerAnswer;
 		string playerQuestion = generateQuestion(&words[i]);
 
-		cout << "\nВы отгадываете " << i + 1 << " слово из " << COUNT_OF_EASY_WORDS << endl;
+		cout << "\nВы отгадываете " << i + 1 << " слово из " << COUNT_OF_WORDS << endl;
 		cout << "Загаданное слово: " << playerQuestion << endl;
 		cout << "Это слово: ";
 		cin >> playerAnswer;
